@@ -2,6 +2,9 @@
 
 # AT-UI-VUE3
 
+[![Build Status](https://github.com/all-task/at-ui-vue3/workflows/Docs%20for%20Github%20page/badge.svg?branch=master)](https://github.com/all-task/at-ui-vue3/actions)
+
+
 A VUE3 Base UI Library (In Dev)
 
 Code migration from [AT-UI-Library](https://github.com/all-task/AT-UI-Library)
