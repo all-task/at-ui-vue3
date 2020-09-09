@@ -7,7 +7,7 @@ module.exports = {
       filename: 'index.html',
     },
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/at-ui-vue3/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/at-ui-vue3/' : '/at-ui-vue3/',
 
   configureWebpack: {
     devtool: 'source-map',
