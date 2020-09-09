@@ -1,7 +1,6 @@
 {
   "name": "at-ui-vue3",
-  "version": "0.3.0",
-  "private": true,
+  "version": "0.3.0-1",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
