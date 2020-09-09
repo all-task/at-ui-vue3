@@ -1,0 +1,29 @@
+// Use normalize.css to reboot user-agent styles
+@import './normalize';
+
+@import './variables';
+
+@import './mixins';
+
+@import './sizes';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.global-font {
+  color: $global-font-color;
+  font: $global-font;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $global-background-color;
+  @extend .global-font;
+}

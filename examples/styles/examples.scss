@@ -1,0 +1,17 @@
+#root,
+#main {
+  height: 100%;
+}
+
+.examples {
+  position: relative;
+  display: flow-root;
+  width: 100%;
+
+  &__wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 20px;
+  }
+}

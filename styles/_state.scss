@@ -1,0 +1,16 @@
+.hover {}
+
+.active {}
+
+.running {}
+
+.disabled {}
+
+.running,
+.disabled {
+  cursor: not-allowed;
+
+  &:active {
+    pointer-events: none;
+  }
+}

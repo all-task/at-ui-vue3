@@ -1,0 +1,113 @@
+$spacing-x: $size-base * 2;
+$spacing-y: $size-base * 2;
+
+.at-group {
+  $this: &;
+
+  --size: #{$size-normal};
+  --label-color: initial;
+  --direction: initial;
+
+  &+& {
+    margin: $spacing-y 0 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin: 0 (-$spacing-x) (-$spacing-y) 0;
+  }
+
+  &__label {
+    color: var(--label-color);
+    font-size: calc(var(--size) / 2 - var(--size) / 16);
+    line-height: var(--size);
+  }
+
+  &__label,
+  .at-button,
+  .at-radio,
+  .at-checkbox {
+    flex-shrink: 0;
+    margin: 0 $spacing-x $spacing-y 0;
+  }
+
+  &--disabled {
+    --label-color: #{$color-dark-20};
+  }
+
+  &--column {
+    #{$this}__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #{$this}__label {
+      margin: 0 0 $size-base 0;
+    }
+
+    .at-radio,
+    .at-checkbox {
+      margin: 0 0 $size-base $spacing-x;
+
+      &:last-child {
+        margin: 0 0 $spacing-y $spacing-x;
+      }
+    }
+  }
+
+  &.rounded .at-radio:first-child,
+  &.rounded .at-group__label+.at-radio,
+  &.rounded .at-checkbox:first-child,
+  &.rounded .at-group__label+.at-checkbox {
+    // Need Improve
+    border-radius: $global-radius 0 0 $global-radius;
+  }
+
+  &.rounded {
+
+    .at-radio,
+    .at-checkbox {
+      &:last-child {
+        border-radius: 0 $global-radius $global-radius 0;
+      }
+    }
+  }
+
+  &.capsule .at-radio:first-child,
+  &.capsule .at-group__label+.at-radio,
+  &.capsule .at-checkbox:first-child,
+  &.capsule .at-group__label+.at-checkbox {
+    // Need Improve
+    border-radius: calc(var(--size) / 2) 0 0 calc(var(--size) / 2);
+  }
+
+  &.capsule {
+
+    .at-radio,
+    .at-checkbox {
+      &:last-child {
+        border-radius: 0 calc(var(--size) / 2) calc(var(--size) / 2) 0;
+      }
+    }
+  }
+
+
+  &.extra {
+    --group-size: #{$size-extra};
+  }
+
+  &.large {
+    --group-size: #{$size-large};
+  }
+
+  &.mini {
+    --group-size: #{$size-mini};
+    text-transform: capitalize;
+  }
+
+  &.micro {
+    --group-size: #{$size-micro};
+    text-transform: lowercase;
+  }
+}

@@ -1,0 +1,92 @@
+.at-button {
+  // reset
+  appearance: none;
+
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+
+  font-size: 100%;
+  font-family: inherit;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.at-button {
+  --size: var(--group-size, #{$size-normal});
+  --color: #{$color-major};
+
+
+  height: var(--size);
+
+  padding: 0 calc(var(--size) / 2);
+  border: solid $border-size transparent;
+
+  color: var(--color);
+  font-size: calc(var(--size) / 2 - var(--size) / 16);
+  line-height: calc(var(--size) - #{$border-size} * 2) !important; // Need Improve
+
+  &:hover,
+  &.hover {
+    --color: #{$color-major-hover};
+  }
+
+  &:active,
+  &.active {
+    cursor: default;
+  }
+
+  &.running {
+    --color: #{$color-major} !important;
+  }
+
+  &.disabled {
+    --color: #{$color-dark-20};
+
+    text-decoration: line-through;
+  }
+
+  // &.text, &.reset {
+  //
+  // }
+
+  &.minor {
+    border-color: var(--color);
+  }
+
+  &.major,
+  &.submit {
+    background: var(--color);
+    border-color: var(--color);
+    color: $color-lightest;
+  }
+
+  &.rounded {
+    border-radius: $global-radius;
+  }
+
+  &.capsule {
+    border-radius: calc(var(--size) / 2);
+  }
+
+  &.mini {
+    text-transform: capitalize;
+  }
+
+  &.micro {
+    text-transform: lowercase;
+  }
+
+  &.atom {
+    height: auto;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: none;
+  }
+
+}

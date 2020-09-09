@@ -1,0 +1,17 @@
+.extra {
+  --size: #{$size-extra};
+}
+
+.large {
+  --size: #{$size-large};
+}
+
+.mini {
+  --size: #{$size-mini};
+  text-transform: capitalize;
+}
+
+.micro {
+  --size: #{$size-micro};
+  text-transform: lowercase;
+}
