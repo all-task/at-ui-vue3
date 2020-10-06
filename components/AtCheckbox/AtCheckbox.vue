@@ -1,29 +1,21 @@
 <template>
-  <label
-    class="at-checkbox"
-    :class="{
+<label class="at-checkbox" :class="{
       'at-checkbox--checked': checked,
       'at-checkbox--indeterminate': indeterminate,
       'at-checkbox--disabled': disabled,
-    }"
-  >
-    <span class="at-checkbox__symbol">
-      <input
-        class="at-checkbox__original"
-        type="checkbox"
-        :name="name"
-        :checked="checked"
-        @focus="onFocus"
-        @blur="onBlur"
-        @click="onClick"
-        @change.stop="onChange"
-      />
-    </span>
-    <span
-      v-if="label !== undefined"
-      class="at-checkbox__label"
-    >{{ label }}</span>
-  </label>
+    }">
+  <span class="at-checkbox__symbol">
+    <input
+      class="at-checkbox__original"
+      type="checkbox" :name="name"
+      :checked="checked"
+      @focus="onFocus"
+      @blur="onBlur"
+      @click="onClick"
+      @change.stop="onChange" />
+  </span>
+  <span v-if="label !== undefined" class="at-checkbox__label">{{ label }}</span>
+</label>
 </template>
 
 <script lang="ts">

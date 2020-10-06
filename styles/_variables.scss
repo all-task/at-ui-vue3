@@ -15,11 +15,15 @@ $global-font: 12px/1em $font-family;
 // size
 $size-base: 8px;
 
-$size-extra:  $size-base * 6;
-$size-large:  $size-base * 5;
+$size-extra: $size-base * 6;
+$size-large: $size-base * 5;
 $size-normal: $size-base * 4;
-$size-mini:   $size-base * 3;
-$size-micro:  $size-base * 2;
+$size-mini: $size-base * 3;
+$size-micro: $size-base * 2;
 
 // border
 $border-size: 2px;
+
+// spacing
+$spacing-x: $size-base * 2;
+$spacing-y: $size-base * 2;

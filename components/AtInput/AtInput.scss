@@ -1,0 +1,83 @@
+.at-input {
+  --size: var(--group-size, #{$size-normal});
+  --label-color: #{$color-dark-60};
+  --value-color: #{$color-dark-80};
+  --background-color: #{$color-lightest};
+  --border-color: #{$color-dark-60};
+  --border-radius: 0;
+
+  position: relative;
+  display: inline-block;
+
+  margin: 0 $spacing-x $spacing-y 0;
+
+
+  font-size: calc(var(--size) / 2 - var(--size) / 16);
+  line-height: calc(var(--size) - #{$border-size} * 2) !important; // Need Improve
+
+  
+
+  &__label {
+    display: inline-block;
+
+    margin: 0 $spacing-x 0 0;
+
+    color: var(--label-color);
+    font-size: calc(var(--size) / 2 - var(--size) / 16);
+    line-height: var(--size);
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  &__border {
+    display: inline-block;
+    height: var(--size);
+
+    background: var(--background-color);
+    border: solid $border-size var(--border-color);
+    border-radius: var(--border-radius);
+  }
+
+  &__original {
+    padding: 0 $size-base;
+    border: none;
+    background: none;
+    outline: none;
+
+    color: var(--value-color);
+  }
+
+  &:focus-within, &--active {
+    --label-color: #{$color-major};
+    --border-color: #{$color-major};
+  }
+
+  &--disabled {
+    --label-color: #{$color-dark-20};
+    --value-color: #{$color-dark-20};
+    --background-color: #{$color-dark-10};
+    --border-color: #{$color-dark-20};
+  }
+
+  &--error {
+    --label-color: #{$color-error};
+    --value-color: #{$color-error};
+    --border-color: #{$color-error};
+  }
+
+  &.rounded {
+    --border-radius: #{$global-radius};
+  }
+
+  &.line {
+    --background-color: none;
+    .at-input__border{
+      border-top: transparent;
+      border-right: none;
+      border-left: none;
+      padding: 0 $border-size;
+    }
+  }
+}

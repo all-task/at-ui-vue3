@@ -8,7 +8,7 @@
       [button.size]: button && button.size && button.size !== 'normal'
     }">
     <div class="at-group__inner">
-      <label v-if="label !== undefined" class="at-group__label">{{ label }}:</label>
+      <label v-if="label !== undefined" class="at-group__label">{{ label }}</label>
       <at-checkbox
         v-for="(option, index) in options"
         :key="index"
@@ -32,7 +32,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import {
+  defineComponent,
+} from 'vue';
 
 import uid from 'uid';
 

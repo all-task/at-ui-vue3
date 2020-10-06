@@ -22,10 +22,17 @@ const components: Array<RouteRecordRaw> = [
   {
     path: '/components/at-button',
     name: 'Button',
-
     component: () => import(
       /* webpackChunkName: "at-button-examples" */
       '../views/AtButton/AtButtonExamples.vue'
+    ),
+  },
+  {
+    path: '/components/at-input',
+    name: 'Input',
+    component: () => import(
+      /* webpackChunkName: "at-input-examples" */
+      '../views/AtInput/AtInputExamples.vue'
     ),
   },
   {
@@ -36,15 +43,7 @@ const components: Array<RouteRecordRaw> = [
       '../views/AtSelection/AtSelectionExamples.vue'
     ),
   },
-  // {
-  //   path: '/components/at-input',
-  //   name: 'Input',
-  //   group: 'interactive',
-  //   component: () => import(
-  //     /* webpackChunkName: "view-at-input" */
-  //     '../views/AtInput/ViewAtInput.vue'
-  //   ),
-  // },
+
   // {
   //   path: '/components/at-list',
   //   name: 'List',

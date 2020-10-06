@@ -1,6 +1,3 @@
-$spacing-x: $size-base * 2;
-$spacing-y: $size-base * 2;
-
 .at-group {
   $this: &;
 
@@ -19,16 +16,12 @@ $spacing-y: $size-base * 2;
   }
 
   &__label {
-    color: var(--label-color);
-    font-size: calc(var(--size) / 2 - var(--size) / 16);
-    line-height: var(--size);
+    @extend .at-label;
   }
 
-  &__label,
   .at-button,
   .at-radio,
   .at-checkbox {
-    flex-shrink: 0;
     margin: 0 $spacing-x $spacing-y 0;
   }
 

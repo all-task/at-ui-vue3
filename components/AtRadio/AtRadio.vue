@@ -1,28 +1,21 @@
 <template>
-  <label
-    class="at-radio"
-    :class="{
+<label class="at-radio" :class="{
       'at-radio--checked': checked,
       'at-radio--disabled': disabled,
-    }"
-  >
-    <span class="at-radio__symbol">
-      <input
-        class="at-radio__original"
-        type="radio"
-        :name="name"
-        :checked="checked"
-        @focus="onFocus"
-        @blur="onBlur"
-        @click="onClick"
-        @change.stop="onChange"
-      />
-    </span>
-    <span
-      v-if="label !== undefined"
-      class="at-radio__label"
-    >{{ label }}</span>
-  </label>
+    }">
+  <span class="at-radio__symbol">
+    <input
+      class="at-radio__original"
+      type="radio"
+      :name="name"
+      :checked="checked"
+      @focus="onFocus"
+      @blur="onBlur"
+      @click="onClick"
+      @change.stop="onChange" />
+  </span>
+  <span v-if="label !== undefined" class="at-radio__label">{{ label }}</span>
+</label>
 </template>
 
 <script lang="ts">
@@ -32,9 +25,6 @@ import uid from 'uid';
 
 export default defineComponent({
   name: 'AtRadio',
-  model: {
-
-  },
   props: {
     atId: {
       type: String,

@@ -1,35 +1,33 @@
 <template>
-  <div
-    class="at-radio-group at-group"
-    :class="{
+<div
+  class="at-radio-group at-group"
+  :class="{
       'at-group--disabled': disabled,
       'at-group--column': column,
       [button.shape]: button && button.shape && button.shape !== 'rectangle',
       [button.size]: button && button.size && button.size !== 'normal'
-    }"
-  >
-    <div class="at-group__inner">
-      <label
-        v-if="label!==undefined"
-        class="at-group__label"
-      >{{ label }}:</label>
-      <at-radio
-        v-for="(option, index) in options"
-        :key="index"
-        :name="atId"
-        :class="{
-          'at-button': button,
-          'major': button && checked === option.value,
-          'minor': button && checked !== option.value,
-          'disabled': button && disabled || option.disabled
-        }"
-        :checked="checked === option.value"
-        :disabled="disabled || option.disabled"
-        :label="option.label"
-        @change="(checked) => { onChange(option.value, checked); }"
-      />
-    </div>
+    }">
+  <div class="at-group__inner">
+    <label
+      v-if="label!==undefined"
+      class="at-group__label"
+    >{{ label }}</label>
+    <at-radio
+      v-for="(option, index) in options"
+      :key="index"
+      :name="atId"
+      :class="{
+        'at-button': button,
+        'major': button && checked === option.value,
+        'minor': button && checked !== option.value,
+        'disabled': button && disabled || option.disabled
+      }"
+      :checked="checked === option.value"
+      :disabled="disabled || option.disabled"
+      :label="option.label"
+      @change="(checked) => { onChange(option.value, checked); }" />
   </div>
+</div>
 </template>
 
 <script lang="ts">

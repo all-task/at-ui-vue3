@@ -1,4 +1,3 @@
-/* prettier-ignore */
 
 // Grayscale
                           $color-darkest:  #000;
@@ -38,6 +37,8 @@ $color-major: $color-electron-blue; // temp
 $color-major-hover: $color-green-darner-tail; // temp
 
 $color-minor: $color-gray-9; // temp
+
+$color-error: $color-chi-gong;
 
 :root {
   --color-major: #{$color-major};
