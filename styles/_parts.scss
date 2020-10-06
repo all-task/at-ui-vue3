@@ -1,0 +1,12 @@
+.at-label {
+  flex-shrink: 0;
+  margin: 0 $spacing-x $spacing-y 0;
+
+  color: var(--label-color);
+  font-size: calc(var(--size) / 2 - var(--size) / 16);
+  line-height: var(--size);
+
+  &::after {
+    content: ': ';
+  }
+}
